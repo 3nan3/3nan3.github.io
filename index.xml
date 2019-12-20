@@ -21,9 +21,9 @@
 はじめに ゲームのシステムを作っていると、「更新があったアセットだけを検知してダウンロードする」という機能が当たり前のように必要になります。
 Unityではアセットバンドルという、複数のアセットをひとまとめにする機能があり、その機能を使ってアセットの配信を行うのがスタンダードです。また、アセットバンドルをビルドする際にmanifestファイルとういものが自動で生成され、その中にHash値が保存されているので、更新されたかどうかの判定にその値を使おう、と思っていたのですがいろいろありました、というお話。
 ちなみに、Unity全然わからないマンなので間違ってたら指摘入れてください。
-環境 Unity 2018.3.8f1 macOS Mojave(10.14.2)  何が起きたか AssetBundleに更新が必要かどうかを判断するために、manifestのAssetFileHashを使っていました。
+環境 Unity 2018.3.8f1 macOS Mojave(10.14.2) 何が起きたか AssetBundleに更新が必要かどうかを判断するために、manifestのAssetFileHashを使っていました。
 しかし、事件は起きました。
-&amp;gt;&amp;gt;&amp;gt; マシンを変えるとハッシュ値が変わる &amp;lt;&amp;lt;&amp;lt;
+&amp;raquo;&amp;gt; マシンを変えるとハッシュ値が変わる &amp;laquo;&amp;lt;
 えぇマジで？Hashだよ？と思いながらも調べてみると、同じことに悩んでいる方がいました。
 http://sassembla.github.io/Public/2018:09:02%2010-17-07/2018:09:02%2010-17-07.html
  AssetFileHashはLibraryフォルダが共有されないと一貫性を失ってしまう
@@ -50,7 +50,7 @@ http://sassembla.github.io/Public/2015:02:04%2012-47-46/2015:02:04%2012-47-46.ht
 つまりなんだ、同じマシンの中でも変わる可能性があると。
 何を信じればよいのだ。。。
 どうしたか 結局、調べてもこれらの要件を満たすような値を取得する方法は見つかりませんでした。
- Hash値が変わってほしい  AssetBundle の元ファイルのバイトの変化 AssetBundle の元ファイルの相対パスの変化 AssetBundle の元ファイルの、metaファイルのバイトの変化  Hash値が変わらないでほしい  AssetBundle の元ファイルのメタ情報(mtime, extended attributesなど)の変化 Unityプロジェクトを置く場所（パス、マシン、OSなど）の変化   無ければ、作るしか無い（管理するもの増えるの嫌だけど）。</description>
+ Hash値が変わってほしい  AssetBundle の元ファイルのバイトの変化 AssetBundle の元ファイルの相対パスの変化 AssetBundle の元ファイルの、metaファイルのバイトの変化   Hash値が変わらないでほしい  AssetBundle の元ファイルのメタ情報(mtime, extended attributesなど)の変化 Unityプロジェクトを置く場所（パス、マシン、OSなど）の変化    無ければ、作るしか無い（管理するもの増えるの嫌だけど）。</description>
     </item>
     
     <item>
@@ -74,8 +74,8 @@ Hugo自体のファイルや生成元のmarkdownを管理するレポジトリ�
 https://www.ted027.com/post/hugo/#hugo
 （本当にこのサイトのまま作ったので、紹介したら終わりになってしまうのですが）
 以下のような構成で構築を進めます。
-─ blog (git repogitory) ├── public (git submodule &amp;lt;username.github.io&amp;gt;) ├── content # ブログ記事 │　└── post │　├── 2019112401_github_pages_and_hugo.md │　├── 2019112501_other_post.md │　: ├── themas # 選択したテーマ ├── archetypes # 新しく記事を作ったときのテンプレート置き場 └── config.toml # 設定ファイル  導入 動作環境
-Ubuntu 18.</description>
+─ blog (git repogitory) ├── public (git submodule &amp;lt;username.github.io&amp;gt;) ├── content # ブログ記事 │　└── post │　├── 2019112401_github_pages_and_hugo.md │　├── 2019112501_other_post.md │　: ├── themas # 選択したテーマ ├── archetypes # 新しく記事を作ったときのテンプレート置き場 └── config.toml # 設定ファイル 導入 動作環境
+Ubuntu 18.04 LTS Hugo のセットアップ aptとかでインストールしてもいいんですが、最新版をいつでも使えるようにここではGitHubから取得する方法にします。</description>
     </item>
     
   </channel>

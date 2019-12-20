@@ -32,8 +32,8 @@ Hugo自体のファイルや生成元のmarkdownを管理するレポジトリ�
 https://www.ted027.com/post/hugo/#hugo
 （本当にこのサイトのまま作ったので、紹介したら終わりになってしまうのですが）
 以下のような構成で構築を進めます。
-─ blog (git repogitory) ├── public (git submodule &amp;lt;username.github.io&amp;gt;) ├── content # ブログ記事 │　└── post │　├── 2019112401_github_pages_and_hugo.md │　├── 2019112501_other_post.md │　: ├── themas # 選択したテーマ ├── archetypes # 新しく記事を作ったときのテンプレート置き場 └── config.toml # 設定ファイル  導入 動作環境
-Ubuntu 18.</description>
+─ blog (git repogitory) ├── public (git submodule &amp;lt;username.github.io&amp;gt;) ├── content # ブログ記事 │　└── post │　├── 2019112401_github_pages_and_hugo.md │　├── 2019112501_other_post.md │　: ├── themas # 選択したテーマ ├── archetypes # 新しく記事を作ったときのテンプレート置き場 └── config.toml # 設定ファイル 導入 動作環境
+Ubuntu 18.04 LTS Hugo のセットアップ aptとかでインストールしてもいいんですが、最新版をいつでも使えるようにここではGitHubから取得する方法にします。</description>
     </item>
     
   </channel>
